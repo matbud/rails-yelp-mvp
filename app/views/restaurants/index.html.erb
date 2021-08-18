@@ -1,12 +1,14 @@
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li>
+<div class="container">
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li>
 
-      <%= link_to restaurant.name, restaurant_path(restaurant) %>---
-      <%= restaurant.address %>---
-      <%= restaurant.category %>
-    </li>
-  <% end %>
-</ul>
+        <%= link_to restaurant.name, restaurant_path(restaurant) %>---
+        <%= restaurant.address %>---
+        <%= restaurant.category %>
+      </li>
+    <% end %>
+  </ul>
 
-<%= link_to "Add a new restaurant", new_restaurant_path %>
+  <%= link_to "Add a new restaurant", new_restaurant_path %>
+</div>
